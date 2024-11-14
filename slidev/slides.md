@@ -90,6 +90,7 @@ transition: fade-out
 video {
   width: 100%; /* 動画をレスポンシブ化 */
   max-width: 500px; /* 動画の最大幅 */
+  margin:0 auto;
 }
 </style>
 
@@ -107,6 +108,11 @@ transition: fade-out
 transition: fade-out
 ---
 
+# 5. まとめ
+
+---
+transition: fade-out
+---
 
 # What is Slidev?
 
