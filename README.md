@@ -12,3 +12,5 @@ cd slidev
 nvm use v18.16.1
 npm run dev
 ```
+
+![image](https://github.com/user-attachments/assets/b098a079-2249-4ce4-a72c-34f58fdc26d7)
