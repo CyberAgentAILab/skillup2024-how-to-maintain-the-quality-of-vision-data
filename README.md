@@ -3,6 +3,7 @@
 
 ## 参考
 - https://dev.classmethod.jp/articles/eetann-used-slidev/
+- https://zenn.dev/hiroko_ino/articles/hackable-slidev-play-lt
 
 ## 実行
 

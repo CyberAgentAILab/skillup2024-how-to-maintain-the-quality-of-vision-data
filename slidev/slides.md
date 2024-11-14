@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: ビジョン系データ品質の保ち方
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -22,11 +22,16 @@ transition: slide-left
 mdc: true
 # take snapshot for each slide in the overview
 overviewSnapshots: true
+fonts:
+  # basically the text
+  sans: 'Noto Sans JP'
+  # use with `font-serif` css class from windicss
+  serif: 'Robot Slab'
+  # for code blocks, inline code, etc.
+  mono: 'Fira Code'
 ---
 
-# Welcome to Slidev
-
-Presentation slides for developers
+# ビジョン系データ品質の保ち方
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -51,6 +56,46 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 transition: fade-out
 ---
+
+# 1. なぜいまさらデータの品質？
+
+- LLMもTransformerもCNNもRNNもすべてデータが9割
+- 品質が低いデータがベンチマークに使用されることでアーキテクチャの本来の弱点が隠されている
+- 品質が高いデータを使用してベンチマークすることでアーキテクチャの本来の強みが明らかになる
+- レガシーなアーキテクチャの本来のポテンシャルを引き出せない
+
+---
+transition: fade-out
+---
+
+# 2. 品質を高めるためのポイント
+
+- 物体検出をベースに
+  - 画像の量は重要ではない（数十万枚も必要ない）
+  - 背景のコンテキストは重要ではない
+  - バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
+  - １画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
+  - 不必要なマージンをとらない
+  - 対象の境界を侵害しない
+
+---
+transition: fade-out
+---
+
+# 3. 実際のアノテーションサンプル
+
+- 480x360 の画像に対して 2,611 個 のラベルを付与する様子を57秒の動画に凝縮。
+
+---
+transition: fade-out
+---
+
+# 4. 効果測定
+
+---
+transition: fade-out
+---
+
 
 # What is Slidev?
 
