@@ -86,7 +86,16 @@ transition: fade-out
 
 - 480x360 の画像に対して 2,611 個 のラベルを付与する様子を57秒の動画に凝縮。
 
-  https://github.com/user-attachments/assets/264588ed-d029-416b-be4e-9a92482f443a
+<style type="text/css" id="custom-css">
+video {
+  width: 100%; /* 動画をレスポンシブ化 */
+  max-width: 500px; /* 動画の最大幅 */
+}
+</style>
+
+<video controls>
+  <source src="./assets/0001_annotation.mp4" type="video/mp4">
+</video>
 
 ---
 transition: fade-out
