@@ -86,6 +86,8 @@ transition: fade-out
 
 - 480x360 の画像に対して 2,611 個 のラベルを付与する様子を57秒の動画に凝縮。
 
+  https://github.com/user-attachments/assets/264588ed-d029-416b-be4e-9a92482f443a
+
 ---
 transition: fade-out
 ---
