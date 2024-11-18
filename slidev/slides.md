@@ -61,7 +61,7 @@ image: ./assets/0002_image.png
 
 # 1. なぜいまさらデータの品質？
 
-- LLMもVLMもCNNもRNNもすべてデータが命
+- VLMもVLMもCNNもRNNもすべてデータが命
 - 低品質データによってアーキテクチャの本来の弱点が隠されている
 - 高品質データによってアーキテクチャの本来の強みが明らかになる
 - レガシーなアーキテクチャの本来のポテンシャルを引き出せない
@@ -84,7 +84,7 @@ class: flex-row
 }
 
 .flex-row img {
-  max-width: 60%;
+  max-width: 65%;
   height: auto;
 }
 </style>
@@ -111,27 +111,52 @@ class: flex-row
 }
 
 .flex-row img {
-  max-width: 60%;
+  max-width: 70%;
   height: auto;
 }
 </style>
 
 ##
-![1](./assets/0006_000000000544.jpg)
-![2](./assets/0007_000000000544.jpg)
+![3](./assets/0006_000000000544.jpg)
+![4](./assets/0007_000000000544.jpg)
 
 ---
 transition: fade-out
+layout: two-cols
 ---
 
 # 低品質 vs 高品質
 
+画質の比較ではない
+
+##
+![5](./assets/0008_000000000692.jpg)
+
+::right::
+
+# &nbsp;
+# &nbsp;
+##
+![6](./assets/0009_image.png)
+
 ---
 transition: fade-out
+layout: two-cols
 ---
 
 # 低品質 vs 高品質
 
+画質の比較ではない
+
+##
+![7](./assets/0010_000000000544.jpg)
+
+::right::
+
+# &nbsp;
+# &nbsp;
+##
+![8](./assets/0011_image.jpg)
 
 ---
 transition: fade-out
@@ -141,11 +166,61 @@ transition: fade-out
 
 - 物体検出をベースに
   - 画像の量は重要ではない（数十万枚も必要ない）
-  - 背景のコンテキストは重要ではない
+  - 背景のコンテキストはあまり重要ではない
   - バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
   - １画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
   - 不必要なマージンをとらない
   - 対象の境界を侵害しない
+
+---
+transition: fade-out
+layout: two-cols
+---
+
+# 画像の量は重要ではない（数十万枚も必要ない）
+
+##
+- 合計 : 12,114 枚
+  - MS-COCO : 4,533 枚
+  - 自撮り : 3,230 枚
+  - ノイズ付加 : 4,351 枚
+
+::right::
+
+#
+# &nbsp;
+##
+![9](./assets/0012_image.png)
+
+---
+transition: fade-out
+---
+
+# 背景のコンテキストはあまり重要ではない
+
+---
+transition: fade-out
+---
+
+# バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
+
+---
+transition: fade-out
+---
+
+# 画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
+
+---
+transition: fade-out
+---
+
+# 不必要なマージンをとらない
+
+---
+transition: fade-out
+---
+
+# 対象の境界を侵害しない
 
 ---
 transition: fade-out
@@ -713,7 +788,7 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
+<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
   <div text-center text-3xl border border-main rounded>
     Double-click me!
   </div>
