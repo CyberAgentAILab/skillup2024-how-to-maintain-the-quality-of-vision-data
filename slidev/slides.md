@@ -68,9 +68,57 @@ image: ./assets/0002_image.png
 
 ---
 transition: fade-out
+layout: default
+class: flex-row
 ---
 
 # Public Dataset の品質
+
+<style>
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-row img {
+  max-width: 60%;
+  height: auto;
+}
+</style>
+
+##
+![1](./assets/0004_000000000692.jpg)
+![2](./assets/0005_000000000692.jpg)
+
+---
+transition: fade-out
+layout: default
+class: flex-row
+---
+
+# Public Dataset の品質
+
+<style>
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-row img {
+  max-width: 60%;
+  height: auto;
+}
+</style>
+
+##
+![1](./assets/0006_000000000544.jpg)
+![2](./assets/0007_000000000544.jpg)
 
 ---
 transition: fade-out
@@ -639,7 +687,7 @@ Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML D
 ---
 foo: bar
 dragPos:
-  square: 691,32,167,_,-16
+  square: -18,0,0,0
 ---
 
 # Draggable Elements
@@ -665,7 +713,7 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15">
+<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
   <div text-center text-3xl border border-main rounded>
     Double-click me!
   </div>
