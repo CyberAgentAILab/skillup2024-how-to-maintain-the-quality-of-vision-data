@@ -68,7 +68,9 @@ image: ./assets/0002_image.png
 
 ---
 transition: fade-out
+
 ---
+transition: fade-out
 
 # 2. 品質を高めるためのポイント
 
