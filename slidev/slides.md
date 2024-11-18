@@ -55,6 +55,8 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 transition: fade-out
+layout: image-right
+image: ./assets/0002_image.png
 ---
 
 # 1. なぜいまさらデータの品質？
@@ -63,8 +65,6 @@ transition: fade-out
 - 低品質データによってアーキテクチャの本来の弱点が隠されている
 - 高品質データによってアーキテクチャの本来の強みが明らかになる
 - レガシーなアーキテクチャの本来のポテンシャルを引き出せない
-
-![image](https://github.com/user-attachments/assets/97f78ae0-1400-4373-8ab6-caf28c1225bf)
 
 ---
 transition: fade-out
