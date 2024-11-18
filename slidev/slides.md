@@ -70,7 +70,20 @@ image: ./assets/0002_image.png
 transition: fade-out
 ---
 
-aaa
+# Public Dataset の品質
+
+---
+transition: fade-out
+---
+
+# 低品質 vs 高品質
+
+---
+transition: fade-out
+---
+
+# 低品質 vs 高品質
+
 
 ---
 transition: fade-out
