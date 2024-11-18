@@ -64,6 +64,8 @@ transition: fade-out
 - 高品質データによってアーキテクチャの本来の強みが明らかになる
 - レガシーなアーキテクチャの本来のポテンシャルを引き出せない
 
+![image](https://github.com/user-attachments/assets/97f78ae0-1400-4373-8ab6-caf28c1225bf)
+
 ---
 transition: fade-out
 ---
