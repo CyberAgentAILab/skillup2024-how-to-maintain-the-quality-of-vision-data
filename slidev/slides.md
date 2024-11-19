@@ -127,15 +127,13 @@ layout: two-cols
 
 # 低品質 vs 高品質
 
-画質の比較ではない
-
 ##
+画質の比較ではない
 ![5](./assets/0008_000000000692.jpg)
 
 ::right::
 
-# &nbsp;
-# &nbsp;
+&nbsp;
 ##
 ![6](./assets/0009_image.png)
 
@@ -146,15 +144,13 @@ layout: two-cols
 
 # 低品質 vs 高品質
 
-画質の比較ではない
-
 ##
+画質の比較ではない
 ![7](./assets/0010_000000000544.jpg)
 
 ::right::
 
-# &nbsp;
-# &nbsp;
+&nbsp;
 ##
 ![8](./assets/0011_image.jpg)
 
@@ -165,24 +161,25 @@ transition: fade-out
 # 2. 品質を高めるためのポイント
 
 - 物体検出をベースに
-  - 画像の量は重要ではない（数十万枚も必要ない）
+  - 画像の量はそれほど重要ではなくラベルの量が重要（数十万枚も必要ない）
   - バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
   - １画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
   - 不必要なマージンをとらない
   - 対象の境界を侵害しない
+  - ナニを・ドコを学ばせたいか、の基準を明確にする
 
 ---
 transition: fade-out
 layout: two-cols
 ---
 
-# 画像の量は重要ではない（数十万枚も必要ない）
+# 画像の量はそれほど重要ではなくラベルの量が重要（数十万枚も必要ない）
 
 ##
 - 合計 : 12,114 枚
-  - MS-COCO : 4,533 枚
-  - 自撮り : 3,230 枚
-  - ノイズ付加 : 4,351 枚
+  - MS-COCO: 4,533 枚
+  - 自撮り: 3,230 枚
+  - フォトメトリックノイズ付加: 4,351 枚
 
 ::right::
 
@@ -198,16 +195,28 @@ layout: default
 
 # バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
 
+<style>
+img {
+  width: 90%;
+}
+</style>
+
 <div class="content">
   <div class="row">
     <div>
       <ul>
-        <li>列 1 の内容</li>
+        <img src="./assets/0013_upper.png" />
+      </ul>
+      <ul>
+        <img src="./assets/0014_brightness.png" />
       </ul>
     </div>
     <div>
       <ul>
-        <li>列 2 の内容</li>
+        <img src="./assets/0015_aspectratio.png" />
+      </ul>
+      <ul>
+        <img src="./assets/0016_blur.png" />
       </ul>
     </div>
   </div>
@@ -219,17 +228,53 @@ transition: fade-out
 
 # 画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
 
+<style>
+img {
+  width: 50%;
+}
+</style>
+
+##
+![17](./assets/0017_small.png){.m-auto}
+
 ---
 transition: fade-out
 ---
 
-# 不必要なマージンをとらない
+# 不必要なマージンをとらない {.text-left}
+# 対象の境界を侵害しない {.text-left}
+
+<style>
+img {
+  width: 80%;
+}
+</style>
+
+<div class="content">
+  <div class="row">
+    <div>
+      <ul>
+        <img src="./assets/0018_normal.png" />
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <img src="./assets/0019_up.png" />
+      </ul>
+    </div>
+  </div>
+</div>
+
 
 ---
 transition: fade-out
 ---
 
-# 対象の境界を侵害しない
+# ナニを・ドコを学ばせたいか、の基準を明確にする {.text-left}
+
+##
+クマーにはアノテーションをしていない。これはモデルの出力結果。
+![20](./assets/0020_kuma.jpg){.m-auto}
 
 ---
 transition: fade-out
@@ -797,7 +842,7 @@ Double-click on the draggable elements to edit their positions.
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
+<v-drag pos="663,206,261,_,-15"undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined>
   <div text-center text-3xl border border-main rounded>
     Double-click me!
   </div>
