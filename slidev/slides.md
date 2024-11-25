@@ -49,17 +49,12 @@ fonts:
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 transition: fade-out
-layout: image-right
-image: ./assets/0002_image.png
+layout: two-cols
 ---
 
-# 1. なぜいまさらデータの品質？
+# 1. なぜいまさらデータの品質？ {.text-left}
 
 <style>
 .large-text {
@@ -71,6 +66,13 @@ image: ./assets/0002_image.png
 - 低品質データによってアーキテクチャの本来の弱点が隠されている{.large-text}
 - 高品質データによってアーキテクチャの本来の強みが明らかになる{.large-text}
 - レガシーなアーキテクチャの本来のポテンシャルを引き出せない{.large-text}
+
+::right::
+
+#
+# &nbsp;
+##
+![1](/0002_image.png)
 
 ---
 transition: fade-out
@@ -96,8 +98,8 @@ class: flex-row
 </style>
 
 ##
-![1](./assets/0004_000000000692.jpg)
-![2](./assets/0005_000000000692.jpg)
+![1](/0004_000000000692.jpg)
+![2](/0005_000000000692.jpg)
 
 ---
 transition: fade-out
@@ -123,8 +125,8 @@ class: flex-row
 </style>
 
 ##
-![3](./assets/0006_000000000544.jpg)
-![4](./assets/0007_000000000544.jpg)
+![3](/0006_000000000544.jpg)
+![4](/0007_000000000544.jpg)
 
 ---
 transition: fade-out
@@ -141,13 +143,13 @@ layout: two-cols
 
 ##
 画質の比較ではない{.large-text}
-![5](./assets/0008_000000000692.jpg)
+![5](/0008_000000000692.jpg)
 
 ::right::
 
 &nbsp;{.large-text}
 ##
-![6](./assets/0009_image.png)
+![6](/0009_image.png)
 
 ---
 transition: fade-out
@@ -164,13 +166,13 @@ layout: two-cols
 
 ##
 画質の比較ではない{.large-text}
-![7](./assets/0010_000000000544.jpg)
+![7](/0010_000000000544.jpg)
 
 ::right::
 
 &nbsp;{.large-text}
 ##
-![8](./assets/0011_image.jpg)
+![8](/0011_image.jpg)
 
 ---
 transition: fade-out
@@ -178,13 +180,20 @@ transition: fade-out
 
 # 2. 品質を高めるためのポイント
 
-- 物体検出をベースに
-  - 画像の量はそれほど重要ではなくラベルの量が重要（数十万枚も必要ない）
-  - バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
-  - １画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする
-  - 不必要なマージンをとらない
-  - 対象の境界を侵害しない
-  - ナニを・ドコを学ばせるかの基準を明確にする
+<style>
+.large-text {
+  font-size: 1.1em;
+}
+</style>
+
+- 物体検出をベースに{.large-text}
+  - 画像の量はそれほど重要ではなくラベルの量が重要（数十万枚も必要ない）{.large-text}
+  - バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要{.large-text}
+  - １画像内に対象が存在する場合はどんなに小さなオブジェクトでもひとつ残らずポジティブサンプルとしてマークする{.large-text}
+  - 不必要なマージンをとらない{.large-text}
+  - 対象の境界を侵害しない{.large-text}
+  - ナニを・ドコを学ばせるかの基準を明確にする{.large-text}
+  - クラスの階層構造定義{.large-text}
 
 ---
 transition: fade-out
@@ -193,18 +202,23 @@ layout: two-cols
 
 # 画像の量はそれほど重要ではなくラベルの量が重要（数十万枚も必要ない）
 
+<style>
+.large-text {
+  font-size: 1.2em;
+}
+</style>
+
 ##
-- 合計 : 12,114 枚
+- 合計 : 12,114 枚{.large-text}
   - MS-COCO: 4,533 枚
   - 自撮り: 3,230 枚
   - フォトメトリックノイズ付加: 4,351 枚
 
 ::right::
 
-#
 # &nbsp;
 ##
-![9](./assets/0012_image.png)
+![9](/0012_image.png)
 
 ---
 transition: fade-out
@@ -221,20 +235,20 @@ img {
 
 <div class="content">
   <div class="row">
-    <div>
+    <div class="ml-auto">
       <ul>
-        <img src="./assets/0013_upper.png" />
+        <img src="/0013_upper.png" />
       </ul>
       <ul>
-        <img src="./assets/0014_brightness.png" />
+        <img src="/0014_brightness.png" />
       </ul>
     </div>
-    <div>
+    <div class="ml-0">
       <ul>
-        <img src="./assets/0015_aspectratio.png" />
+        <img src="/0015_aspectratio.png" />
       </ul>
       <ul>
-        <img src="./assets/0016_blur.png" />
+        <img src="/0016_blur.png" />
       </ul>
     </div>
   </div>
@@ -253,7 +267,7 @@ img {
 </style>
 
 ##
-![17](./assets/0017_small.png){.m-auto}
+![17](/0017_small.png){.m-auto}
 
 ---
 transition: fade-out
@@ -270,14 +284,14 @@ img {
 
 <div class="content">
   <div class="row">
-    <div>
+    <div class="ml-auto">
       <ul>
-        <img src="./assets/0018_normal.png" />
+        <img src="/0018_normal.png" />
       </ul>
     </div>
-    <div>
+    <div class="ml-0">
       <ul>
-        <img src="./assets/0019_up.png" />
+        <img src="/0019_up.png" />
       </ul>
     </div>
   </div>
@@ -299,7 +313,251 @@ transition: fade-out
 ##
 クマーにはアノテーションをしていない。これはモデルの出力結果。{.large-text}
 
-![20](./assets/0020_kuma.jpg){.m-auto}
+![20](/0020_kuma.jpg){.m-auto}
+
+---
+transition: fade-out
+layout: two-cols
+---
+
+# ナニを・ドコを学ばせるかの基準を明確にする {.text-left}
+
+<style>
+.large-text {
+  font-size: 1.5em;
+  line-height: 1.0;
+}
+</style>
+
+##
+<div>
+  <Markdown>
+
+  - 見えない部分を推定する・推定しない{.large-text}
+    - 見えない部分を推定するなら全部アノテーションする
+    - 見えない部分を推定しないなら一切無駄なアノテーションをしない
+  - 中途半端に手を抜かない{.large-text}
+
+  </Markdown>
+</div>
+
+::right::
+
+# &nbsp;
+# &nbsp;
+##
+![26](/0113_doko.png){.m-auto}
+
+---
+transition: fade-out
+---
+
+# クラスの階層構造定義 {.text-left}
+
+<style>
+.large-text {
+  font-size: 1.5em;
+  line-height: 1;
+}
+img {
+  width: 85%;
+}
+</style>
+
+##
+コンテキストを階層構造で学ばせる。（特徴の共有）{.large-text}
+
+![24](/0024_class_hierarchy.png){.m-auto}
+
+---
+transition: fade-out
+layout: two-cols
+---
+
+# クラスの階層構造定義 {.text-left}
+
+<style>
+.large-text {
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+</style>
+
+##
+<div class="ml-50">
+  <Markdown>
+
+  - 全身{.large-text}
+  - 性別{.large-text}
+  - 大人・子供{.large-text}
+  - 頭部{.large-text}
+  - 正面向き{.large-text}
+  - 顔{.large-text}
+  - 目{.large-text}
+  - 鼻{.large-text}
+  - 耳{.large-text}
+  - 口{.large-text}
+  - 手{.large-text}
+  - 右手・左手{.large-text}
+  - 足{.large-text}
+
+  </Markdown>
+</div>
+
+::right::
+
+# &nbsp;
+##
+
+<div class="grid place-items-start mx-auto" style="width: 175%; max-width: 750px; aspect-ratio: 16 / 9; position: relative;">
+  <img
+    src="/0026_person.png"
+    alt="背景画像"
+    class="absolute inset-0 h-full object-contain block ml-0"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0100_body.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0101_gender.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0102_generation.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0103_head.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0104_front.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0105_face.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0109_eye.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0110_nose.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0111_ear.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0112_mouth.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0106_hand.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0107_right-left.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0108_foot.png"
+    alt="前面画像"
+    class="absolute inset-0 h-full object-contain"
+  />
+  <img
+    v-click
+    v-motion
+    :initial="{ x: 800, y: -100, scale: 1.0, rotate: -50 }"
+    :enter="{ x: 0, y: 0, scale: 1.0, rotate: 0 }"
+    src="/0114_fullpose.png"
+    alt="背景画像"
+    class="absolute inset-0 h-full object-contain block ml-50"
+  />
+</div>
+
+
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
 
 ---
 transition: fade-out
@@ -326,7 +584,7 @@ video {
 </style>
 
 <video controls>
-  <source src="./assets/0001_annotation.mp4" type="video/mp4">
+  <source src="/0001_annotation.mp4" type="video/mp4">
 </video>
 
 ---
@@ -342,7 +600,7 @@ img {
 </style>
 
 ##
-![21](./assets/0021_full.jpg){.m-auto}
+![21](/0021_full.jpg){.m-auto}
 
 ---
 transition: fade-out
@@ -357,7 +615,7 @@ img {
 </style>
 
 ##
-![22](./assets/0022_head.jpg){.m-auto}
+![22](/0022_head.jpg){.m-auto}
 
 ---
 transition: fade-out
@@ -372,7 +630,7 @@ img {
 </style>
 
 ##
-![23](./assets/0023_mAP.png){.m-auto}
+![23](/0023_mAP.png){.m-auto}
 
 ---
 transition: fade-out
