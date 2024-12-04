@@ -1,4 +1,4 @@
-# skillup-2024-how-to-maintain-the-quality-of-vision-data
+# skillup2024-how-to-maintain-the-quality-of-vision-data
 ビジョン系データ品質の保ち方 第２回 AILab スキルアップ研修 [AI Lab Skill Up Onboarding 2024](https://sites.google.com/cyberagent.co.jp/ailabskillup/).
 
 ## 参考
