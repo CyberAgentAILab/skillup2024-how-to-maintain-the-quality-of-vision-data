@@ -46,7 +46,7 @@ layout: default
 
 # 自己紹介
 ##
-![0](/0000_20250313132438.png)
+<img src="/0000_20250313132438.png" style="width: 90%; display: block; margin: auto;" />
 
 ---
 transition: fade-out
@@ -61,7 +61,7 @@ layout: two-cols
 }
 </style>
 
-- VLMもVLMもCNNもRNNもすべてデータが命{.large-text}
+- VLMもLLMもCNNもRNNもすべてデータが命{.large-text}
 - 低品質データによってアーキテクチャの本来の弱点が隠されている{.large-text}
 - 高品質データによってアーキテクチャの本来の強みが明らかになる{.large-text}
 - レガシーなアーキテクチャの本来のポテンシャルを引き出せない{.large-text}
