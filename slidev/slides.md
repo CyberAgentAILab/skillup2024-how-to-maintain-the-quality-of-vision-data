@@ -41,6 +41,14 @@ fonts:
 </div>
 
 ---
+layout: default
+---
+
+# 自己紹介
+##
+![0](/0000_20250313132438.png)
+
+---
 transition: fade-out
 layout: two-cols
 ---
