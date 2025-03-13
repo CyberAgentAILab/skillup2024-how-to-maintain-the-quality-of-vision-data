@@ -75,6 +75,55 @@ layout: two-cols
 
 ---
 transition: fade-out
+---
+
+# データ品質を限界まで高めた結果（CNNでの出力）
+
+<style>
+img {
+  width: 90%;
+}
+</style>
+
+##
+![21](/0021_full.jpg){.m-auto}
+
+---
+transition: fade-out
+---
+
+# データ品質を限界まで高めた結果（CNNでの出力）
+
+<style>
+img {
+  width: 90%;
+}
+</style>
+
+##
+![22](/0022_head.jpg){.m-auto}
+
+---
+transition: fade-out
+---
+
+# データ品質を限界まで高めた結果（数値性能）
+
+<style>
+img {
+  width: 80%;
+}
+</style>
+
+##
+- 人間でも視認が難しい極小の人体パーツでも実用的な検出精度を出せる
+- 従来困難と思い込まれがちな「属性」の推定も高精度に推定可能
+- 頭部向き８方向（front 〜 left-front）のようにテクスチャだけでは判断が困難なクラスも推定可能
+
+<img src="/0023_mAP.png" style="width: 67%; display: block; margin: auto;" />
+
+---
+transition: fade-out
 layout: default
 class: flex-row
 ---
@@ -224,11 +273,11 @@ transition: fade-out
 layout: default
 ---
 
-# バリエーション（対象とカメラの角度、ノイズ、対象のサイズ、故意のアスペクト比破壊）の量が重要
+# バリエーション（対象とカメラの角度、故意のアスペクト比破壊、ノイズ、対象のサイズ）の量が重要
 
 <style>
 img {
-  width: 90%;
+  width: 80%;
 }
 </style>
 
@@ -236,17 +285,21 @@ img {
   <div class="row">
     <div class="ml-auto">
       <ul>
+        対象とカメラの角度（俯角最大）
         <img src="/0013_upper.png" />
       </ul>
       <ul>
+        ノイズ（コントラスト破壊）
         <img src="/0014_brightness.png" />
       </ul>
     </div>
     <div class="ml-0">
       <ul>
+        故意のアスペクト比破壊（427ｘ640 -> 480x360）
         <img src="/0015_aspectratio.png" />
       </ul>
       <ul>
+        ノイズ（モーションブラー）＋ 対象のサイズが極小
         <img src="/0016_blur.png" />
       </ul>
     </div>
@@ -290,7 +343,7 @@ img {
     </div>
     <div class="ml-0">
       <ul>
-        <img src="/0019_up.png" />
+        <img src="/0019_up___.png" />
       </ul>
     </div>
   </div>
@@ -310,9 +363,12 @@ transition: fade-out
 </style>
 
 ##
-クマーにはアノテーションをしていない。これはモデルの出力結果。{.large-text}
+- 例えば「着ぐるみ」を「人」とするか、しないかの基準を確定させる
+- 人間でも正確な位置を推定不可能なクラス（今回は左側女性の「膝」）はアノテーションしない
+  - 但し、特定ドメイン（今回は「人」）に完全に特化したデータを大量に学習させると、クラス間の相対的な位置関係をモデルが学んで位置推定可能になることが分かっている
+- データ作成の最初から最後まで一貫した基準を遵守する
 
-![20](/0020_kuma.jpg){.m-auto}
+<img src="/0020_kuma.jpg" style="width: 43%; display: block; margin: auto;" />
 
 ---
 transition: fade-out
@@ -349,6 +405,7 @@ layout: two-cols
 
 ---
 transition: fade-out
+layout: two-cols
 ---
 
 # クラスの階層構造定義 {.text-left}
@@ -364,9 +421,23 @@ img {
 </style>
 
 ##
-コンテキストを階層構造で学ばせる。（特徴の共有）{.large-text}
+コンテキストを階層構造で学ばせる（特徴の共有）{.large-text}
+- クラス間の関係性を効率的に捉えられるようになる
+  - テクスチャ
+  - クラス間の相対的な位置関係・距離
+- 少ないパラメータ量でも精度が向上する
+- 右図は物体検出CNNのみで骨格検出に成功した様子
+  - 各関節はテクスチャから判断できる特徴がほぼ無い
+  - 各関節の左右の概念は教師として与えていない
+  - 顔の各パーツは 5x5 ピクセルほどのテクスチャしか無い
+  - クラス間の位置関係を正確に捉えている
 
-![24](/0024_class_hierarchy.png){.m-auto}
+##
+
+::right::
+
+&nbsp;
+<img src="/0024_class_hierarchy.png" style="width: 100%; display: block; margin: auto;" />&nbsp;<img src="/0024_000000000693.jpg" style="width: 65%; display: block; margin: auto;" />
 
 ---
 transition: fade-out
@@ -590,52 +661,7 @@ video {
 transition: fade-out
 ---
 
-# 4. 効果測定
-
-<style>
-img {
-  width: 90%;
-}
-</style>
-
-##
-![21](/0021_full.jpg){.m-auto}
-
----
-transition: fade-out
----
-
-# 4. 効果測定
-
-<style>
-img {
-  width: 90%;
-}
-</style>
-
-##
-![22](/0022_head.jpg){.m-auto}
-
----
-transition: fade-out
----
-
-# 4. 効果測定
-
-<style>
-img {
-  width: 80%;
-}
-</style>
-
-##
-![23](/0023_mAP.png){.m-auto}
-
----
-transition: fade-out
----
-
-# 5. まとめ
+# 4. まとめ
 
 <style>
 .large-text {
