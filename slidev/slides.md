@@ -379,7 +379,7 @@ layout: two-cols
 
 <style>
 .large-text {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.0;
 }
 </style>
@@ -391,6 +391,9 @@ layout: two-cols
   - 見えない部分を推定する・推定しない{.large-text}
     - 見えない部分を推定するなら全部アノテーションする
     - 見えない部分を推定しないなら一切無駄なアノテーションをしない
+  - 右図の例では{.large-text}
+    - ピザの上に全く見えない膝のアノテーションがある
+    - 一方で後ろの人は全くアノテーションされていない
   - 中途半端に手を抜かない{.large-text}
 
   </Markdown>
